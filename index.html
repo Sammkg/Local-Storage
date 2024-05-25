@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let input = document.createElement('input')
+            let p = document.createElement('p')
+        
+        input.oninput = (e) =>{
+            // console.log(e.target.value)
+            // p.innerHTML = e.target.value
+            localStorage.setItem('text',e.target.value)   
+        }
+
+    p.innerHTML = localStorage.getItem('text')
+
+    let body =document.body
+    body.append(input)
+    body.append(p)
+</script>
+
+</html>
